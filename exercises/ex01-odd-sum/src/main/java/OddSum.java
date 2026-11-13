@@ -25,12 +25,21 @@ public class OddSum {
      * @param arr an array of integers
      * @return the sum of all integers at odd indices in arr
      */
+
     public static int oddSum(int[] arr) {
+        int total = 0;
+
+        if (arr.length==0 || arr.length==1) {
+            return 0;
+        }
+        for (int i = 1; i < arr.length; i += 2){
+            total += arr[i];
+        }
         // TODO: Replace the line below. Use a for-loop that starts at index 1
         //       and steps by 2 (i += 2), adding arr[i] to a running total.
         //       Recall arr.length gives the number of elements.
         //       You can index into arrays as we do in Python
         //       (e.g. arr[i] gives you the item at index i).
-        return 0;
+        return total;
     }
 }
